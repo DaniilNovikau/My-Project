@@ -19,7 +19,7 @@ jobs:
           sfdx-version: 'latest'
 
       - name: Authenticate Dev Hub org
-        run: sfdx force:auth:jwt:grant -u daniil.novikov.dev@gmail.com -i ${{ secrets.SFDX_CLIENT_ID }} -f ./server.key 
+        run: sfdx force:auth:jwt:grant -u daniil.novikov.dev@gmail.com -i ${{ secrets.SFDX_CLIENT_ID }} -f keys/server.key 
 
       - name: Create scratch org
         run: |
