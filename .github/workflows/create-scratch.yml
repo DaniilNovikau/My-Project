@@ -1,3 +1,30 @@
-#-----------------------
-# Create new scratch org on new branch creation
-#-----------------------
+name: Create Salesforce scratch org on new branch
+
+on:
+  create:
+    branches:
+      - 'develop/*' # listens to branch creation events that starts with 'scratch/'
+
+jobs:
+  create-scratch-org:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Salesforce CLI
+        uses: sfdx-actions/setup-sfdx@v1
+        with:
+          sfdx-version: 'latest'
+
+      - name: Authenticate Dev Hub org
+        run: sfdx force:auth:jwt:grant -u daniil.novikov.dev@gmail.com -i ${{ secrets.SFDX_CLIENT_ID }} -f ./server.key 
+
+      - name: Create scratch org
+        run: |
+          sfdx force:org:create -s -f config/project-scratch-def.json -s -v daniil.novikov.dev@gmail.com
+
+      - name: Push code to scratch org
+        run: |
+          sfdx force:source:push 
