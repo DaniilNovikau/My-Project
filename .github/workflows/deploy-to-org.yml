@@ -24,4 +24,4 @@ jobs:
         
       - name: Deploy Metadata to Dev Hub
         run: |
-          sfdx force:source:deploy -p force-app -u daniil.novikov.dev@gmail.com -l RunLocalTests
+          sfdx force:source:deploy --loglevel debug -p force-app -u daniil.novikov.dev@gmail.com -l RunLocalTests
