@@ -1,1 +1,24 @@
 name: Deploy New Changes to DevHub Org
+
+on:
+  push:
+    branches: [ develop ]
+    paths:
+      - 'force-app/**'
+
+jobs:
+  push-changes-to-org:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Salesforce CLI
+        uses: salesforcecli/action-setup@v1
+        
+      - name: Authenticate Dev Hub org
+        run: sfdx force:auth:jwt:grant -u daniil.novikov.dev@gmail.com -i ${{ secrets.SFDX_CLIENT_ID }} -f keys/server.key -a DevHub
+        
+      - name: Deploy Metadata to Dev Hub
+        run: |
+          sfdx force:source:deploy -p force-app -u daniil.novikov.dev@gmail.com -l RunLocalTests
