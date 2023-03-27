@@ -9,12 +9,15 @@ on:
 jobs:
   push-changes-to-org:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Setup Salesforce CLI
-        uses: salesforcecli/action-setup@v1
+        uses: sfdx-actions/setup-sfdx@v1
+        with:
+          sfdx-version: 'latest'
         
       - name: Authenticate Dev Hub org
         run: sfdx force:auth:jwt:grant -u daniil.novikov.dev@gmail.com -i ${{ secrets.SFDX_CLIENT_ID }} -f keys/server.key -a DevHub
