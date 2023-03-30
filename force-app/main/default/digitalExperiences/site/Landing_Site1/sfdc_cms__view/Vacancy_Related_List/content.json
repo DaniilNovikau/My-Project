@@ -1,0 +1,48 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Vacancy Related List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "sectionConfig" : "{\"UUID\":\"1097b8ce-7257-40d9-b160-e9c382b3d4f0\",\"columns\":[{\"UUID\":\"506d86c4-1aca-467e-b0b8-d193d4e64f83\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "506d86c4-1aca-467e-b0b8-d193d4e64f83",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "1097b8ce-7257-40d9-b160-e9c382b3d4f0",
+          "type" : "component"
+        } ],
+        "id" : "b6bf25c6-7635-4623-81b1-5b016c71f9a6",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "20047df3-9603-4920-9874-68b77904448b",
+          "type" : "component"
+        } ],
+        "id" : "f24061e5-8186-48be-92b5-48cb02ecb157",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "45544fbc-44f0-4a43-9f18-ce1e457925da",
+      "type" : "component"
+    },
+    "themeLayoutType" : "Inner",
+    "viewType" : "relatedlist-a00"
+  }
+}

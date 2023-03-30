@@ -1,0 +1,26 @@
+.navigation-panel {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9;
+    width: 100%;
+    height: 3.5rem;
+    background-color: rgb(179, 200, 236);
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.navigation-tile:hover {
+    padding: 0 1rem;
+    cursor: pointer;
+    color: var(--dxp-g-brand);
+}
+
+.navigation-tile {
+    padding: 0 1rem;
+}
+
+.navigation-logo {
+    font-size: 1.6rem;
+    font-family: cursive;
+}

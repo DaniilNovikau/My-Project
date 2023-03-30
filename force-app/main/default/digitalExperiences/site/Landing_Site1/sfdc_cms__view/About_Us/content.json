@@ -1,0 +1,51 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "About Us",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "sectionConfig" : "{\"UUID\":\"592d5202-411a-42ec-8134-407abea03892\",\"columns\":[{\"UUID\":\"7c5a2ff7-516e-4fa4-b345-ce9c33e8b450\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "7c5a2ff7-516e-4fa4-b345-ce9c33e8b450",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "592d5202-411a-42ec-8134-407abea03892",
+          "type" : "component"
+        } ],
+        "id" : "cbce07f7-3f7e-468d-b822-9cb76172010d",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "About Us",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "269119f6-3a8b-4c15-90ad-641e4ee5f3d9",
+          "type" : "component"
+        } ],
+        "id" : "06d3bcb2-d9ba-4040-af58-dc1be51f2aef",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "0b09fd60-3d11-48cd-95cd-28425976eef5",
+      "type" : "component"
+    },
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-about-us"
+  }
+}

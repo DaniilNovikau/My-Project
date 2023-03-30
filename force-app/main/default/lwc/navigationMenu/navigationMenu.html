@@ -1,0 +1,27 @@
+<template>
+    <div class="navigation-panel">
+        <div class="navigation-logo">
+            Landing Site
+        </div>
+        <div class="navigation-tiles slds-grid">
+            <template for:each={navigationMenuItems} for:item="menuItem">
+                <div class="navigation-tile" key={menuItem} data-link={menuItem.actionValue} onclick={navigate}>
+                    {menuItem.label}
+                </div>
+            </template>
+        </div>
+        <div class="navigation-login-buttons">
+            <template lwc:if={isUserLoggedIn}>
+                <lightning-button label="Sign In" variant="base" class="slds-m-right_medium">
+                </lightning-button>
+                <lightning-button label="Sign Up" variant="brand">
+                </lightning-button>
+            </template>
+            <template lwc:else>
+                <a href={logoutLink} class="slds-button slds-button_brand">
+                    Log Out
+                </a>
+            </template>
+        </div>
+    </div>
+</template>

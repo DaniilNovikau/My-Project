@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Vacancy Related List",
+  "contentBody" : {
+    "activeViewId" : "Vacancy_Related_List",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "relatedlist-a00",
+    "urlPrefix" : "vacancy"
+  }
+}
